@@ -1,4 +1,6 @@
 <?php
+//Auteur: Lorenzo van der Horst
+//website: webshop
 
 abstract class Product {
     protected $name;
@@ -128,7 +130,7 @@ class ProductList {
     }
 
     protected function calculateSellPrice($product) {
-        // Aangepaste verkoopprijzen zoals gevraagd
+
         if ($product->getName() == "Test1") {
             return 7.09;
         } elseif ($product->getName() == "Test2") {
@@ -142,13 +144,13 @@ class ProductList {
         } elseif ($product->getName() == "Call of Duty 2") {
             return 13.92;
         } else {
+
             // Als de productnaam niet overeenkomt, wordt de normale berekening toegepast
             return $product->getPurchasePrice() + $product->getProfit() + ($product->getPurchasePrice() * $product->getTax() / 100);
         }
     }
 }
 
-// Voorbeeld van het gebruik:
 $productList = new ProductList();
 $productList->addProduct(new Music("Test1", 7.09, 21, 0.00, "Description", "Artist 1", ["Number 1", "Number 2"]));
 $productList->addProduct(new Music("Test2", 15.13, 21, 0.00, "Description", "Artist 2", ["Number 3", "Number 4"]));
@@ -159,3 +161,4 @@ $productList->addProduct(new Game("Call of Duty 2", 13.92, 21, 0.00, "Descriptio
 
 echo $productList->generateTable();
 ?>
+
