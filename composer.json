@@ -1,0 +1,18 @@
+{
+    "name": "lawva/login_unittest",
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "login_unittest\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lorenzo van der Horst",
+            "email": "9019456@student.tcrmbo.nl"
+        }
+    ],
+    "require": {}
+}
